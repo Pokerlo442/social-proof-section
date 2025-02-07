@@ -1,0 +1,232 @@
+:root{
+
+  /* Colors */
+
+  --clr-veryDarkMagenta: hsl(300, 43%, 22%);
+  --clr-softPink: hsl(333, 80%, 67%);
+
+  --clr-darkGrayishMagenta: hsl(303, 10%, 53%);
+  --clr-lightGrayishMagenta: hsl(300, 24%, 96%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  /* Font */
+  --fs-normal: .973rem;
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+}
+
+@font-face {
+  font-family: 'League Spartan';
+  src: url(fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf);
+  font-weight: 400,500,700;
+  font-style: normal;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'League Spartan', sans-serif;
+  background:top left no-repeat url(images/bg-pattern-top-mobile.svg),
+  bottom right no-repeat url(images/bg-pattern-bottom-mobile.svg);
+}
+
+/* Container */
+
+.container{
+  max-width: 88%;
+  margin: auto;
+  margin-top: 5rem;
+}
+.header_container{  
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.star_container{
+  margin-bottom: 1rem;
+  display: flex;
+  gap: .5rem;
+}
+.rating_container{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;  
+  margin-bottom:2.75rem;
+}
+
+.rating_item{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-lightGrayishMagenta);
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+.rating{
+  font-size: 1.063rem;
+  font-weight:var(--fw-bold);
+  color: var(--clr-veryDarkMagenta);  
+}
+.testimonial_container{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.testimonial_item{
+  background-color: var(--clr-veryDarkMagenta);
+  padding: 2.5rem 2rem;
+  border-radius: 8px;
+}
+.person_container{
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+/* Text */
+
+.main_header{
+  font-size: 2.5rem;
+  color: var(--clr-veryDarkMagenta);
+  font-weight: var(--fw-bold);
+  line-height: 80%;
+  letter-spacing: -1.43px;
+  padding: 0 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.header_text{
+  font-size: 1.188rem;
+  font-weight: var(--fw-medium);
+  color: var(--clr-darkGrayishMagenta);
+  line-height: 130%;
+  letter-spacing: -.63px;
+}
+.header_name{
+  color: var(--clr-white);
+  font-size:1.063rem;
+  font-weight: var(--fw-bold);
+  margin-bottom: .25rem;
+
+}
+.sub_header{
+  font-size:1.063rem;
+  font-weight: var(--fw-normal);
+  color: var(--clr-softPink);
+}
+.text{
+  font-size: 1.063rem;
+  font-weight: var(--fw-medium);
+  letter-spacing: -.3px;
+  line-height: 130%;
+  color: white;
+  margin-top: 1.75rem;
+  margin-bottom: -.5rem;
+}
+
+/* Images */
+
+.img{
+  height: 40px;
+  border-radius: 500px;
+}
+
+/* Footer */
+
+footer{
+  margin-top: 5rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Media Queries */
+
+
+@media (min-width:64.125em){
+
+  body{
+    background:top left no-repeat url(images/bg-pattern-top-desktop.svg),
+  bottom right no-repeat url(images/bg-pattern-bottom-desktop.svg);
+  }
+  .container{
+    max-width: 1275px;
+  }
+  .header_container{
+    max-width: 445px;
+    text-align: left;
+  }
+  .upper_container{
+    display: flex;
+    margin: 7.5rem 5rem 0 4rem;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+  .rating_container{
+    width: 540px;
+    margin-top: 1.5rem;
+  }
+  .rating_item{
+    width: 445px;   
+    flex-direction: row;   
+    gap: 1.973rem;
+    justify-content: flex-start;
+    padding: 1.25rem 2rem;
+    
+  }
+  .star_container{
+    margin: 0;
+  }
+  .testimonial_container{    
+    margin-top: 2rem;
+    margin-inline: 5rem;
+    height: 260px;
+    flex-direction: row;
+    gap: 1.85rem;
+    justify-content: space-evenly;
+  }
+  .testimonial_item{
+    max-width: 350px;
+  }
+  .testimonial_item--top{
+    align-self: flex-start;
+  }
+  .testimonial_item--mid{
+    align-self: center;
+  }
+  .testimonial_item--bottom{
+    align-self: flex-end;
+  }
+  .rating_item--1{
+    align-self: flex-start;
+  }
+  .rating_item--2{
+    align-self: center;
+  }
+  .rating_item--3{
+    align-self: flex-end;
+  }
+
+  /* Text */
+  .main_header{
+    font-size: 3.5rem;
+    letter-spacing: -2px;
+    padding-left: 1rem;
+    line-height: 85%;
+  }
+  .header_text{
+    padding-left: 1rem;
+    font-size:1.188rem;
+  }
+}
